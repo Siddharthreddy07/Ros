@@ -1,0 +1,18 @@
+digraph G {
+"base_link" -> "ZED2_link"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 5501.725 sec old)\nBuffer length: 0.000 sec\n"];
+"odom" -> "base_link"[label="Broadcaster: /ekf_odom\nAverage rate: 51.799 Hz\nMost recent transform: 5501.656 ( 0.069 sec old)\nBuffer length: 5.058 sec\n"];
+"base_link" -> "chassis"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 5501.725 sec old)\nBuffer length: 0.000 sec\n"];
+"base_link" -> "camera"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 5501.725 sec old)\nBuffer length: 0.000 sec\n"];
+"base_link" -> "gps_link"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 5501.725 sec old)\nBuffer length: 0.000 sec\n"];
+"base_link" -> "hokuyo"[label="Broadcaster: /map_nav_broadcaster\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 5501.725 sec old)\nBuffer length: 0.000 sec\n"];
+"base_link" -> "imu_link"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 5501.725 sec old)\nBuffer length: 0.000 sec\n"];
+"odom" -> "scanmatcher_frame"[label="Broadcaster: /hector_mapping\nAverage rate: 35.604 Hz\nMost recent transform: 5501.148 ( 0.577 sec old)\nBuffer length: 4.550 sec\n"];
+"base_link" -> "bl_wheel"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10.204 Hz\nMost recent transform: 5501.721 ( 0.004 sec old)\nBuffer length: 4.900 sec\n"];
+"base_link" -> "br_wheel"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10.204 Hz\nMost recent transform: 5501.721 ( 0.004 sec old)\nBuffer length: 4.900 sec\n"];
+"base_link" -> "fl_wheel"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10.204 Hz\nMost recent transform: 5501.721 ( 0.004 sec old)\nBuffer length: 4.900 sec\n"];
+"base_link" -> "fr_wheel"[label="Broadcaster: /robot_state_publisher\nAverage rate: 10.204 Hz\nMost recent transform: 5501.721 ( 0.004 sec old)\nBuffer length: 4.900 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 5501.725"[ shape=plaintext ] ;
+ }->"odom";
+}

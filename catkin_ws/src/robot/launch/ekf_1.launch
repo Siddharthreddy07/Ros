@@ -1,0 +1,9 @@
+<launch>
+  <rosparam command="load" file="$(find robot)/config/ekf_config.yaml" />
+  <node pkg="robot_localization" type="ekf_localization_node" name="ekf_se_map" clear_params="true">
+    <remap from="odometry/filtered" to="odometry/filtered_map"/>
+  </node>
+  <node pkg="robot_localization" type="navsat_transform_node" name="navsat_transform" clear_params="true">
+    <remap from="odometry/filtered" to="odometry/filtered_map"/>
+  </node>
+</launch>

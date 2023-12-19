@@ -1,0 +1,19 @@
+<launch>
+  <!-- Set ROS parameters -->
+  <param name="/use_sim_time" value="true" />
+  <param name="/tf_use_sim_time" value="true" />
+  <param name="/hector_mapping/base_frame" value="base_link" />
+  <param name="/hector_mapping/odom_frame" value="odom" />
+  <param name="/hector_mapping/map_frame" value="map" />
+  <param name="/hector_mapping/scan" value="/scan" />
+  <param name="/hector_mapping/pub_map_odom_transform" value="true" />
+  <param name="/hector_mapping/queue_size" value="100" />
+
+  <!-- Set buffer duration (adjust as needed) -->
+  <param name="/tf2_buffer_duration" value="5.0" />
+
+  <!-- Start Hector Mapping Node -->
+  <node pkg="hector_mapping" type="hector_mapping" name="hector_mapping">
+    <!-- Additional parameters go here -->
+  </node>
+</launch>
